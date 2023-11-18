@@ -1,0 +1,126 @@
+/* NavBar.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  nav {
+    background-color: #fff;
+    color: #4E5D94;
+    padding: 20px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: #4E5D94;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menu-icon {
+    background: none;
+    border: none;
+    color: #4E5D94;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    display: none; /* Hidden by default on web view */
+  }
+  
+  .mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .mobile-menu-items a {
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: #4E5D94;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .mobile-menu-items a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .web-menu {
+    display: flex;
+  }
+  
+  .web-menu a {
+    margin: auto;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #4E5D94;
+    font-weight: bold;
+  }
+  
+  .auth-buttons button {
+    background: red;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  /* ... (previous CSS rules) ... */
+
+@media screen and (max-width: 768px) {
+    .web-menu {
+      display: none; /* Hide web menu on mobile view */
+    }
+  
+    .mobile-menu {
+        
+      display: block;
+      position: relative;
+    }
+    .menu-icon{
+        position: absolute;
+        top: 0 ;
+        right: 10px;
+        transform: translate(50%, -50%);
+    }
+  
+    .mobile-menu-items {
+        z-index: 100;
+        margin: 0;
+        padding: 20px 0;
+        position: absolute;
+        top: 34px;
+        right: -20px;
+        /* transform: translateX(0%); */
+        background-color: #f6faf9;
+      display: none;
+      width: 200px;
+      flex-direction: column;
+      max-height: 600px; /* Adjust based on your content */
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu-items.open{
+        display: flex;
+    }
+
+    .mobile-menu-items a {
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -1,0 +1,64 @@
+/* AddProperty.css */
+.add-property {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+ .add-property form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  
+ .add-property label {
+  display: block;
+  margin-bottom: 10px;
+  }
+  .add-property input[type="text"],
+  .add-property input[type="number"],
+  .add-property textarea,
+  .add-property input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .add-property select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+  .add-property button {
+    background-color: #008080; /* Teal color */
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .add-property button:hover {
+    background-color: #006666; /* Darker Teal on hover */
+  }
+  .thumbnail-container{
+    max-width: 200px;
+  }
+  .thumbnail-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media screen and (max-width: 768px) {
+   .add-property{
+    max-width: 90%;
+   } 
+  }
+  

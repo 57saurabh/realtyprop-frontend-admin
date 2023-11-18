@@ -1,0 +1,117 @@
+.customerList-container {
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.customerList-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customerList-container table th,.customerList-container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customerList-container table th {
+  background-color: #f2f2f2;
+}
+
+.customerList-container table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.customerList-container table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Adjust the styles for better readability on smaller screens */
+@media screen and (max-width: 600px) {
+  .customerList-container table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .customerList-container table th,.customerList-container table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    display: block;
+    text-align: left;
+  }
+
+  .customerList-container table th {
+    background-color: #f2f2f2;
+  }
+
+  .customerList-container table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .customerList-container table tr:hover {
+    background-color: #f1f1f1;
+  }
+}
+.export-button {
+  margin: 10px 0;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.export-button:hover {
+  background-color: #2980b9;
+}
+
+@media screen and (max-width: 600px) {
+  .customerList-container table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .customerList-container table th,
+  .customerList-container table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    display: block;
+    text-align: left;
+  }
+
+  .customerList-container table th {
+    background-color: #f2f2f2;
+  }
+
+  .customerList-container table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .customerList-container table tr:hover {
+    background-color: #f1f1f1;
+  }
+}
+
+/* Button style for exporting CSV */
+.export-button {
+  margin: 10px 0;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.export-button:hover {
+  background-color: #2980b9;
+}

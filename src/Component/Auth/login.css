@@ -1,0 +1,75 @@
+.container-box{
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  background-image: url('../utils/asset/brandon-griggs-wR11KBaB86U-unsplash.jpg');
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center; /* Center the image horizontally and vertically */
+  background-repeat: no-repeat;
+}
+
+.form-container {
+  width: 300px;
+  margin:  auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9a8;
+}
+.form-container h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+label {
+  display: block;
+}
+
+input[type=email], input[type=password],input[type=text],input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+.form-container button:hover {
+  opacity: 0.8;
+}
+
+.password{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ .password input{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+ }
+ .password span{
+  /* width: 10%; */
+  /* padding: 12px 20px; */
+  margin: 8px 0 8px 8px;
+  display: inline-block;
+  /* border: 1px solid #ccc; */
+ }
+

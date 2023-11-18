@@ -1,0 +1,82 @@
+/* EditProperty.css */
+.edit-property-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-property-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .edit-property-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-property-container label {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .edit-property-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .edit-property-container span {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .edit-property-container button {
+    padding: 10px;
+    font-size: 1.2rem;
+   
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .edit-property-container button[type=submit] {
+    background-color: #4CAF50;
+  }
+  
+  .edit-property-container .gobackbtn button{
+    margin: 10px 0;
+    width: 100%;
+    background: #a04559;
+  }
+  
+  .edit-property-container button:hover {
+    background-color: #4569a0;
+  }
+  
+  .edit-property-container img {
+    max-width: 100px;
+    margin: 5px;
+  }
+ .edit-property-container  select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .edit-property-container{
+     max-width: 80%;
+     /* max-width: 500px; */
+    } 
+   }
