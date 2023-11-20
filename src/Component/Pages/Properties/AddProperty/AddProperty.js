@@ -108,7 +108,7 @@ const AddProperty = () => {
         <label>Bathrooms:
           <input type="number" name="bathrooms" value={ bathrooms} onChange={(e) => setBathrooms(e.target.value)} />
         </label>
-        <label>Square Footage:
+        <label>Sqr.mt:
           <input type="text" name="squareFootage" value={ squareFootage} onChange={(e) => setSquareFootage(e.target.value)} />
         </label>
         <label>Description:
