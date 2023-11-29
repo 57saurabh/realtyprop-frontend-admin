@@ -4,9 +4,10 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './AddProperty.css'; // Import your CSS file
+import { useNavigate } from 'react-router-dom';
 
 const AddProperty = () => {
-  
+  const history = useNavigate();
     const [title, setTitle] = useState('');
     const [type, setType] = useState('');
     const [location, setLocation] = useState('');
@@ -67,6 +68,9 @@ const AddProperty = () => {
       setLoading(false);
     }
   };
+  const goBack = () => {
+    history(-1); // Navigate back one step in the history
+  };
 
   
   return (
@@ -125,6 +129,9 @@ const AddProperty = () => {
         <button type="submit" disabled={loading}>
           {loading ? 'Adding  ...' : 'Add Property'}
         </button>
+        <div className="gobackbtn">
+        <button   onClick={goBack}>Go Back</button>
+              </div>
       <ToastContainer />
       </form>
     </div>

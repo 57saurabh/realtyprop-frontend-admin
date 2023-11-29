@@ -21,7 +21,7 @@ const EditProperty = () => {
     type:'',
     transactionType:'',
     description:'',
-    featured:'',
+    features:'',
     squareFootage:'',
     images:[],
     
@@ -199,11 +199,11 @@ const EditProperty = () => {
           }
         </label>
         <label><b>Features:</b>{editableField==='features'?(
-          <input type="text" name="features" value={property.featured} onChange={handleChange} />
+          <input type="text" name="features" value={property.features} onChange={handleChange} />
 
         ):
         (
-          <span onClick={() => handleEdit('featured')}>{property.features}</span>
+          <span onClick={() => handleEdit('features')}>{property.features}</span>
         )
           }
         </label>
