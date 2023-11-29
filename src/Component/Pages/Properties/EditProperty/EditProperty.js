@@ -184,7 +184,7 @@ const EditProperty = () => {
           }
         </label>
         <label>
-          <b>Square Footage:</b>{editableField==='squareFootage'?(
+          <b>Area:</b>{editableField==='squareFootage'?(
           <input type="number" name="squareFootage" value={property.squareFootage} onChange={handleChange} />
           ):(<span onClick={()=>handleEdit('squareFootage')}>{property.squareFootage}</span>)
           }
