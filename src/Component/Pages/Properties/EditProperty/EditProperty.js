@@ -136,7 +136,7 @@ const EditProperty = () => {
 </label>
 
         <label>
-  <b>Transaction Type:</b>
+  <b>Transaction Type: </b>
   {editableField === 'transactionType' ? (
     <select name="transactionType" value={property.transactionType} onChange={handleChange}>
       <option value="Rent">Rent</option>
@@ -152,20 +152,20 @@ const EditProperty = () => {
 
         
         <label>
-          <b>Location:</b> {editableField === 'location' ? (
+          <b>Location: </b> {editableField === 'location' ? (
             <input type="text" name="location" value={property.location} onChange={handleChange} />
           ) : (
             <span onClick={() => handleEdit('location')}>{property.location}</span>
           )}
         </label>
         <label>
-         <b> Price:</b> {editableField === 'price' ? (
+         <b> Price: </b> {editableField === 'price' ? (
             <input type="text" name="price" value={property.price} onChange={handleChange} />
           ) : (
             <span onClick={() => handleEdit('price')}>{property.price}</span>
           )}
         </label>
-        <label><b>Bedrooms:</b>{editableField==='bedrooms'?(
+        <label><b>Bedrooms: </b>{editableField==='bedrooms'?(
           <input type="number" name="bedrooms" value={property.bedrooms} onChange={handleChange} />
 
         ):
@@ -174,7 +174,7 @@ const EditProperty = () => {
         )
           }
         </label>
-        <label><b>Bathrooms:</b>{editableField==='bathrooms'?(
+        <label><b>Bathrooms: </b>{editableField==='bathrooms'?(
           <input type="number" name="bathrooms" value={property.bathrooms} onChange={handleChange} />
 
         ):
@@ -185,11 +185,11 @@ const EditProperty = () => {
         </label>
         <label>
           <b>Area:</b>{editableField==='squareFootage'?(
-          <input type="number" name="squareFootage" value={property.squareFootage} onChange={handleChange} />
+          <input type="text" name="squareFootage" value={property.squareFootage} onChange={handleChange} />
           ):(<span onClick={()=>handleEdit('squareFootage')}>{property.squareFootage}</span>)
           }
         </label>
-        <label><b>Description:</b>{editableField==='description'?(
+        <label><b>Description: </b>{editableField==='description'?(
           <input type="text" name="description" value={property.description} onChange={handleChange} />
 
         ):
@@ -198,7 +198,7 @@ const EditProperty = () => {
         )
           }
         </label>
-        <label><b>Features:</b>{editableField==='features'?(
+        <label><b>Features: </b>{editableField==='features'?(
           <input type="text" name="features" value={property.features} onChange={handleChange} />
 
         ):
