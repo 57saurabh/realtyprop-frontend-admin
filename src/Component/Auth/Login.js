@@ -37,7 +37,7 @@ const Login = () => {
         password: loginFormData.password,
       };
 
-      const response = await axios.post("https://realtyprop-backend-production.up.railway.app/auth/login", formData);
+      const response = await axios.post("https://realtyprop-backend.vercel.app/auth/login", formData);
 
       const {  token  } = response.data;
       // token(token);

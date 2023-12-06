@@ -14,7 +14,7 @@ const QueryWindow = () => {
     const fetchQueries = async () => {
       try {
         setLoading(true)
-        const response = await axios.get('https://realtyprop-backend-production.up.railway.app/queries', {
+        const response = await axios.get('https://realtyprop-backend.vercel.app/queries', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -40,7 +40,7 @@ const QueryWindow = () => {
   const handleQueryResolved = async (id) => {
     try {
       // Update the query's resolved status in the backend
-      await axios.patch(`https://realtyprop-backend-production.up.railway.app/queries/${id}`, { resolved: true }, {
+      await axios.patch(`https://realtyprop-backend.vercel.app/queries/${id}`, { resolved: true }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -134,7 +134,7 @@ export default QueryWindow;
 //   useEffect(() => {
 //     const fetchQueries = async () => {
 //       try {
-//         const response = await axios.get('https://realtyprop-backend-production.up.railway.app/queries',{
+//         const response = await axios.get('https://realtyprop-backend.vercel.app/queries',{
 //           headers: {
 //             Authorization: `Bearer ${localStorage.getItem('token')}`,
 //             // 'Content-Type': 'multipart/form-data',
@@ -153,7 +153,7 @@ export default QueryWindow;
 //   const handleQueryResolved = async (id) => {
 //     try {
 //       // Update the query's resolved status in the backend
-//       await axios.patch(`https://realtyprop-backend-production.up.railway.app/queries/${id}`, { resolved: true }, {
+//       await axios.patch(`https://realtyprop-backend.vercel.app/queries/${id}`, { resolved: true }, {
 //         headers: {
 //           Authorization: `Bearer ${localStorage.getItem('token')}`,
 //         },

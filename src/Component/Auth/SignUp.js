@@ -41,7 +41,7 @@ const SignUp = () => {
         password: signUpFormData.password,
       };
 
-      const response = await axios.post("http://localhost:8090/auth/register", formData);
+      const response = await axios.post("https://realtyprop-backend.vercel.app/auth/register", formData);
 
       const successMessage = response.data.message || "Sign-up successful!";
       displayToastMessage(successMessage, "success");
