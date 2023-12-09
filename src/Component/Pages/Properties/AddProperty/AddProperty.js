@@ -66,6 +66,16 @@ const AddProperty = () => {
       toast.error(`${error.message}. Please try again.`);
     } finally {
       setLoading(false);
+      setTitle('')
+      setType('')
+      setLocation('')
+      setPrice('')
+      setBedrooms('')
+      setBathrooms('')
+      setSquareFootage('')
+      setDescription('')
+      setFeatures('')
+      setImages(null)
     }
   };
   const goBack = () => {

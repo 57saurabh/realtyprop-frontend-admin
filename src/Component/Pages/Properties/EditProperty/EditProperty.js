@@ -23,10 +23,9 @@ const EditProperty = () => {
     description:'',
     features:'',
     squareFootage:'',
-    images:[],
-    
-
+    // images:[],
   });
+  const [images,setImages]= useState(null);
 
 
   const [editableField, setEditableField] = useState(null); // Track the currently editable field
@@ -61,17 +60,23 @@ const EditProperty = () => {
   const handleEdit = (field) => {
     setEditableField(field);
   };
-  const handleImageChange = (e) => {
-    // Handle image upload and update the property state
-    const uploadedImages = Array.from(e.target.files).map((file) =>
-      URL.createObjectURL(file)
-    );
-    setProperty({ ...property, images: uploadedImages });
-  };
+  // const handleImageChange = (e) => {
+  //   // Handle image upload and update the property state
+  //   const uploadedImages = Array.from(e.target.files).map((file) =>
+  //     URL.createObjectURL(file)
+  //   );
+  //   setProperty({ ...property, images: uploadedImages });
+  // };
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    if (images) {
+      for (let i = 0; i < images.length; i++) {
+        formData.append('images', images[i]);
+      }
+    }
 
     try {
       const response = await axios.patch(`https://realtyprop-backend.vercel.app/property/${params.id}`, {
@@ -85,7 +90,17 @@ const EditProperty = () => {
         }
       );
 
+      const response1 = await axios.patch(`https://realtyprop-backend.vercel.app/property/${params.id}/images`, formData, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+  
+
       console.log(response.data);
+      console.log(response1.data)
+
 
       // Reset editable field after successful update
       toast.success('Property updated successfully', {
@@ -102,11 +117,20 @@ const EditProperty = () => {
       });
       // Handle error and show a failure message
     }
+
   };
 
   const goBack = () => {
     history(-1); // Navigate back one step in the history
   };
+
+  const handleImageChange = async (e) => {
+    setImages(e.target.files);
+    console.log(e.target.files);
+  };
+  
+  
+
 
   return (
     <div className='edit-property-container'>
