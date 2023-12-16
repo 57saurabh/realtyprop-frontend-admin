@@ -233,7 +233,7 @@ const EditProperty = () => {
         </label>
         <label>
           <b>Images:</b>{editableField === 'images' ? (
-            <input type="file" name="images" onChange={handleImageChange} multiple />
+            <input type="file" name="images" onChange={handleImageChange} multiple accept="image/*" />
           ) : (
             <div>
               {property.images.map((image, index) => (
@@ -244,6 +244,7 @@ const EditProperty = () => {
                 name="images"
                 onChange={handleImageChange}
                 multiple
+                accept="image/*"
               />
             </div>
           )}

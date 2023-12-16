@@ -134,7 +134,7 @@ const AddProperty = () => {
         </label>
 
          <label>Images:
-         <input type="file" name="images" onChange={handleFileChange} multiple />
+         <input type="file" name="images" onChange={handleFileChange} multiple accept="image/*"/>
         </label>
         <button type="submit" disabled={loading}>
           {loading ? 'Adding  ...' : 'Add Property'}

@@ -22,7 +22,8 @@ const PropertyList = () => {
       try {
         // Fetch properties from the server
         const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
-        setProperties(response.data);
+        const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setProperties(sortedProperties);
       } catch (error) {
         console.error('Error fetching properties:', error);
       } finally {
