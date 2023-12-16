@@ -13,7 +13,7 @@ const CustomerList = () => {
     const fetchCustomers = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('https://realtyprop-backend.vercel.app/user', {
+        const response = await axios.get('https://realtyprop-backend-production.up.railway.app/user', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

@@ -33,7 +33,7 @@ const EditProperty = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const response = await axios.get(`https://realtyprop-backend.vercel.app/property/${params.id}`,{
+        const response = await axios.get(`https://realtyprop-backend-production.up.railway.app/property/${params.id}`,{
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
             // 'Content-Type': 'multipart/form-data',
@@ -79,7 +79,7 @@ const EditProperty = () => {
     }
 
     try {
-      const response = await axios.patch(`https://realtyprop-backend.vercel.app/property/${params.id}`, {
+      const response = await axios.patch(`https://realtyprop-backend-production.up.railway.app/property/${params.id}`, {
         [editableField]: property[editableField],
     },
         {
@@ -90,7 +90,7 @@ const EditProperty = () => {
         }
       );
 
-      const response1 = await axios.patch(`https://realtyprop-backend.vercel.app/property/${params.id}/images`, formData, {
+      const response1 = await axios.patch(`https://realtyprop-backend-production.up.railway.app/property/${params.id}/images`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data',
