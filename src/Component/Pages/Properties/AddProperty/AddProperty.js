@@ -49,7 +49,7 @@ const AddProperty = () => {
       setLoading(true);
       
       const response = await axios.post(
-        "https://realtyprop-backend-production.up.railway.app/property",
+        "https://realtyprop-backend-production-d2c6.up.railway.app/property",
         formData,
         {
           headers: {

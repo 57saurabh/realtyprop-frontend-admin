@@ -14,7 +14,7 @@ const QueryWindow = () => {
     const fetchQueries = async () => {
       try {
         setLoading(true)
-        const response = await axios.get('https://realtyprop-backend.vercel.app/queries', {
+        const response = await axios.get('https://realtyprop-backend-production-d2c6.up.railway.app/queries', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

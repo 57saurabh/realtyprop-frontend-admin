@@ -21,7 +21,7 @@ const PropertyList = () => {
     const fetchData = async () => {
       try {
         // Fetch properties from the server
-        const response = await axios.get('https://realtyprop-backend-production.up.railway.app/property');
+        const response = await axios.get('https://realtyprop-backend-production-d2c6.up.railway.app/property');
         const sortedProperties = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
         setProperties(sortedProperties);
       } catch (error) {
@@ -38,7 +38,7 @@ const PropertyList = () => {
   const handleDelete = async (id) => {
     try {
       // Delete property from the server
-      await axios.delete(`https://realtyprop-backend-production.up.railway.app/property/${id}`,
+      await axios.delete(`https://realtyprop-backend-production-d2c6.up.railway.app/property/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -65,7 +65,7 @@ const PropertyList = () => {
     try {
       // Send a PUT request to the server to update the property
       const property = properties.find(property => property._id === id);
-      await axios.patch(`https://realtyprop-backend-production.up.railway.app/property/${id}`, {
+      await axios.patch(`https://realtyprop-backend-production-d2c6.up.railway.app/property/${id}`, {
         featured: !property.featured,
       }, {
         headers: {

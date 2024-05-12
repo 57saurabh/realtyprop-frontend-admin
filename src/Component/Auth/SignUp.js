@@ -41,7 +41,7 @@ const SignUp = () => {
         password: signUpFormData.password,
       };
 
-      const response = await axios.post("https://realtyprop-backend-production.up.railway.app/auth/register", formData);
+      const response = await axios.post("https://realtyprop-backend-production-d2c6.up.railway.app/auth/register", formData);
 
       const successMessage = response.data.message || "Sign-up successful!";
       displayToastMessage(successMessage, "success");
