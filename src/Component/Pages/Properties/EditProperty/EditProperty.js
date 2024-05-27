@@ -72,11 +72,8 @@ const EditProperty = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    if (images) {
-      for (let i = 0; i < images.length; i++) {
-        formData.append('images', images[i]);
-      }
-    }
+    const updateImages = images && images.length > 0;
+   
 
     try {
       const response = await axios.patch(`https://realtyprop-backend-production-d2c6.up.railway.app/property/${params.id}`, {
@@ -89,17 +86,23 @@ const EditProperty = () => {
           },
         }
       );
+      console.log(response.data);
 
-      const response1 = await axios.patch(`https://realtyprop-backend-production-d2c6.up.railway.app/property/${params.id}/images`, formData, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      if (images && updateImages) {
+        for (let i = 0; i < images.length; i++) {
+          formData.append('images', images[i]);
+        }
+        const response1 = await axios.patch(`https://realtyprop-backend-production-d2c6.up.railway.app/property/${params.id}/images`, formData, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        console.log(response1.data)
+      }
+
   
 
-      console.log(response.data);
-      console.log(response1.data)
 
 
       // Reset editable field after successful update
